@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: task1
+  name: task1
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: task1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: task1
+        access: external
+    spec:
+      containers:
+      - image: httpd
+        name: httpd
+        ports:
+        - containerPort: 80
+        resources: 
+          requests:
+            cpu: 50m
+            memory: 100Mi
+status: {}
