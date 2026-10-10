@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: task1
-  name: task1
+    app: task4
+  name: task4
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: task1
+      app: task4
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: task1
+        app: task4
         access: external
     spec:
       containers:
-      - image: httpd
+      - image: httpd:2.4
         name: httpd
         ports:
         - containerPort: 80
