@@ -6,7 +6,7 @@ metadata:
     app: task1
   name: task1
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: task1
@@ -25,6 +25,6 @@ spec:
         - containerPort: 80
         resources: 
           requests:
-            cpu: 50m
-            memory: 100Mi
+            cpu: 10m
+            memory: 50Mi
 status: {}
